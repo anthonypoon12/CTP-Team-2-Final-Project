@@ -8,11 +8,13 @@ import pandas as pd
 # from sklearn.preprocessing import StandardScaler
 # from sklearn.linear_model import LogisticRegression
 from zipfile import ZipFile
+import os
 
 file_name = 'fraudulent-transactions-data.zip' #the file is your dataset exact name
-with ZipFile(file_name, 'r') as zip:
-    zip.extractall()
-    print('Done')
+if not os.path.isfile("Fraud.csv"):
+    with ZipFile(file_name, 'r') as zip:
+        zip.extractall()
+        print('Done')
 
 df = pd.read_csv('Fraud.csv')
 
