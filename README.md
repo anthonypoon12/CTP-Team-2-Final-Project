@@ -1,11 +1,5 @@
-# CTP-Team-2-Final-Project
+# CTP9-Credit Card Fraud Detection using Neural Networks
 
-Before you start:
-
-0. Run 'pip install -r requirements.txt' in your virtual environment
-    Try to make sure virtual environment is named venv
-1. Make a Kaggle account
-2. Get API Token (must be in "kaggle.json")
-3. Place in a directory ".kaggle" in your home directory
-4. Run 'kaggle datasets download -d chitwanmanchanda/fraudulent-transactions-data' in terminal
-5. Run app.py
+- In this project, we aim to expand upon current methods of binary classification of fraudulent credit card transactions in a synthesized dataset. Current methods with this dataset have been with Support Vector Machine (SVM) and Logisitc Regression. We propose a neural network as it can take advantage of the large number of samples within the dataset and potentially pick out complex patterns more effectively.
+- In this notebook, we explore the dataset's features by checking for multicollinearity, analyzing feature distributions and class distribution, and augmenting the dataset by appending a new column called "Per Change" which represents the percent change from the beginning of a transaction to the end of the transaction.
+- We implement a leakyReLu acitivation function to take into account the negative values that our augmented dataset contains. We also perform Synthetic Minority Oversampling Technique to make up in our dataset's class imbalance. 
